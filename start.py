@@ -10,13 +10,7 @@ def parse():
     response = requests.get(URL, headers = HEADERS)
     soup = BeautifulSoup(response.content, 'html.parser')
     items = soup.findAll('div', class_ = 'offer-wrapper')
-    comps = []
 
     for item in items:
-        comps.append({
-            'title': item.find('a', class_ = 'marginright5 link linkWithHash detailsLink').
-        })
-
-        for comp in comps:
-            print(comp['title'])
+        print(item.find('strong').text)
 parse()
