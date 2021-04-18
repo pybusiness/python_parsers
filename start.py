@@ -14,7 +14,7 @@ def parse():
 
     for item in items:
         comps.append({
-            'title': item.find('a', class_ = 'marginright5 link linkWithHash detailsLink linkWithHashPromoted').get_text(strip = True)
+            'title': item.find('a', class_ = 'marginright5 link linkWithHash detailsLink').
         })
 
         for comp in comps:
